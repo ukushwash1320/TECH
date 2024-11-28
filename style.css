@@ -1,0 +1,239 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-image: radial-gradient(circle, #22fecc, #4efbd6, #6df7de, #87f3e3, #9fefe6, #a3eee7, #a8ede8, #acece9, #9fefec, #91f1ef, #80f4f2, #6df6f6);
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  
+  header {
+    background: rgba(34, 34, 34, 0.9); /* Slightly transparent background for navbar */
+    color: #fff;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .navbar ul li {
+    position: relative;
+  }
+  
+  .navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    transition: background 0.3s;
+  }
+  
+  .navbar ul li a:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  .navbar .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #333;
+    padding: 10px 0;
+    z-index: 999;
+  }
+  
+  .navbar .dropdown li {
+    margin: 0;
+  }
+  
+  .navbar .dropdown li a {
+    color: #fff;
+    padding: 10px 15px;
+    display: block;
+  }
+  
+  .navbar ul li:hover .dropdown {
+    display: block;
+  }
+  
+  section {
+    padding: 20px;
+    margin: 10px 0;
+    background: none; /* Slightly transparent background for sections */
+    border-radius: 8px;
+  }
+  
+  #home {
+    color: none;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  #home .taglines {
+    margin: 20px 0;
+    font-style: italic;
+  }
+  
+  #home .hero {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+  }
+  .space-for-images {
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically if it exceeds height */
+    border: 2px dashed none;
+    padding: 50px;
+    margin-top: 20px;
+    height: 300px; /* Define the height of the image container */
+    position: relative; /* Make it easier to position the image for animation */
+    overflow: hidden; /* Ensure the image stays within the container bounds */
+  }
+  
+  .space-for-images img {
+    width: 80%; /* Adjust the width of the image */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 500px; /* Optional: limit the max width */
+    position: absolute; /* Required for animation */
+    animation: moveImage 4s infinite alternate; /* Apply the animation */
+  }
+  
+  /* Animation for moving image forward and backward */
+  @keyframes moveImage {
+    0% {
+      transform: translateX(-10px); /* Start slightly backward */
+    }
+    50% {
+      transform: translateX(20px); /* Move forward */
+    }
+    100% {
+      transform: translateX(-10px); /* Return to start */
+    }
+  }
+  
+  
+  
+   #new-tech {
+    color: wheat;
+  }
+  
+  h1, h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  h3 {
+    margin-top: 20px;
+    color: #ebd9d9;
+  }
+  
+  #new-tech {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  #new-tech h2 {
+    font-size: 32px;
+    color: #00f2ff;
+    margin-bottom: 40px;
+  }
+  
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: #282828;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    text-align: center;
+    color: #f5f5f5;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+  }
+  
+  .card h3 {
+    font-size: 24px;
+    color: #00f2ff;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 16px;
+  }
+  
+  /* Styling for About Us Card */
+#about .card {
+  background: #333; /* Darker background for About Us */
+  border: 2px solid #00FF96; /* Cyberpunk Green border */
+  width: 800px; /* Set width for the card */
+  height: 350px; /* Set height for the card */
+  padding: 20px;
+  margin: 20px auto; /* Center the card */
+  border-radius: 10px; /* Slightly rounded corners */
+  color: white; /* Text color for readability */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space out the card content */
+}
+
+#about .card:hover {
+  background: #444; /* Slightly lighter background on hover */
+  border-color: rgb(248, 205, 205); /* Cyberpunk Pink border on hover */
+}
+
+/* Styling for Contact Us Card */
+#contact .card {
+  background: #444; /* Slightly lighter background for Contact */
+  border: 2px solid rgb(248, 205, 205); /* Cyberpunk Pink border */
+  width: 800px; /* Set width for the card */
+  height: 250px; /* Set height for the card */
+  padding: 20px;
+  margin: 20px auto; /* Center the card */
+  border-radius: 10px; /* Slightly rounded corners */
+  color: white; /* Text color for readability */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space out the card content */
+}
+
+#contact .card:hover {
+  background: #333; /* Darker background on hover */
+  border-color: #00FF96; /* Cyberpunk Green border on hover */
+}

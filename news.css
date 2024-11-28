@@ -1,0 +1,106 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(to right top, #000000, #292226, #4a3f4c, #656179, #7987a9, #7896b8, #76a6c5, #76b5cf, #6facbd, #6ba2ab, #69979a, #678d8b);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+  }
+  
+  .navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: #0e0e0e;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar .logo {
+    color: #00f2ff;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .news-container {
+    display: flex;
+    justify-content: space-between; /* Distribute space evenly between cards */
+    align-items: flex-start;
+    height: 80%;
+    gap: 20px;
+  }
+  
+  .news-card {
+    background: radial-gradient(circle, #3e3a3a, #696667, #989697, #cac9ca, #ffffff); /* Gradient background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    width: 400px;
+    flex-shrink: 0; /* Prevent the cards from shrinking */
+  }
+  
+  .news-card h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: black; /* Text color */
+  }
+  
+  #tech-news-list, #product-news-list {
+    list-style: none;
+    margin-bottom: 20px;
+  }
+  
+  .news-item {
+    padding: 10px;
+    background: rgb(201, 201, 190);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: black; /* Text color */
+  }
+  
+  .news-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  button {
+    padding: 10px 20px;
+    background: #00f2ff;
+    border: none;
+    color: #0e0e0e;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background: #000000;
+    color: #ffffff;
+  }
+  

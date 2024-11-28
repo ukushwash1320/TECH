@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latest News</title>
+  <link rel="stylesheet" href="news.css">
+</head>
+<body>
+  <div class="navbar">
+    <a href="#" class="logo">Tech & Product News</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+    </ul>
+  </div>
+
+  <div class="news-container">
+    <div class="news-card" id="tech-news-card">
+      <h1>Latest Tech News</h1>
+      <ul id="tech-news-list">
+        <!-- Tech news items will be inserted dynamically -->
+      </ul>
+      <button id="tech-refresh-btn">Refresh Tech News</button>
+    </div>
+
+    <div class="news-card" id="product-news-card">
+      <h1>Top Product Launches</h1>
+      <ul id="product-news-list">
+        <!-- Product launch news items will be inserted dynamically -->
+      </ul>
+      <button id="product-refresh-btn">Refresh Product News</button>
+    </div>
+  </div>
+
+  <script>
+    const techNewsItems = [
+      "🚀 AI-integrated smartwatches launched at CES 2024.",
+      "🖥️ Microsoft introduces new AI features for Teams.",
+      "💍 The Lotus Ring brings smart home controls to wearables.",
+      "🎧 Neural headphones by Naqi Logix redefine audio technology.",
+      "🚗 Volkswagen adds ChatGPT to vehicles for interactive AI assistance.",
+      "📺 LG unveils Matter-compatible TVs for smart homes.",
+      "📱 Samsung reveals Galaxy Ring for advanced health tracking.",
+      "📈 Generative AI ROI spikes among top business leaders.",
+      "🔦 XGIMI Aladdin: A projector disguised as a ceiling light.",
+      "🍳 ChatGPT-powered appliances showcased at CES.",
+      "🧠 MyWaves introduces AI-powered neural headbands.",
+      "💎 Evie smart ring impresses with health-tracking features.",
+      "🤖 AI trends dominate Microsoft Ignite 2024.",
+      "🪞 Baracoda BMind mirror improves mental health with AI.",
+      "🏠 Samsung’s Now Plus dashboard centralizes smart home management."
+    ];
+
+    const productNewsItems = [
+      "📱 Samsung unveils Galaxy S25 Ultra with revolutionary AI features.",
+      "🎮 Sony launches PS6 with immersive VR support in 2024.",
+      "🖥️ Apple introduces the M4 chip for MacBook Pro 2025.",
+      "📺 LG showcases transparent OLED TVs at CES 2025.",
+      "🏠 Amazon debuts Echo Hub with smarter home integrations."
+    ];
+
+    function loadNews(newsListId, newsItems) {
+      const newsList = document.getElementById(newsListId);
+      newsList.innerHTML = ''; // Clear existing list items
+      const shuffledNews = newsItems.sort(() => 0.5 - Math.random()); // Shuffle the news
+      shuffledNews.slice(0, 4).forEach(news => { // Show 4 random news items
+        const listItem = document.createElement('li');
+        listItem.textContent = news;
+        listItem.classList.add('news-item');
+        newsList.appendChild(listItem);
+      });
+    }
+
+    document.getElementById('tech-refresh-btn').addEventListener('click', () => loadNews('tech-news-list', techNewsItems));
+    document.getElementById('product-refresh-btn').addEventListener('click', () => loadNews('product-news-list', productNewsItems));
+
+    // Load initial news for both cards
+    loadNews('tech-news-list', techNewsItems);
+    loadNews('product-news-list', productNewsItems);
+  </script>
+</body>
+</html>
