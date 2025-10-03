@@ -3,18 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Latest News</title>
-  <link rel="stylesheet" href="news.css">
+  <meta name="description" content="Stay updated with the latest tech news and product launches from leading technology companies.">
+  <meta name="keywords" content="tech news, product launches, technology updates, AI news, gadget news">
+  <title>Latest Tech News & Product Launches - TechZone</title>
+  <link rel="stylesheet" href="css/news.css">
 </head>
 <body>
-  <div class="navbar">
-    <a href="#" class="logo">Tech & Product News</a>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-    </ul>
-  </div>
+  <header>
+    <nav class="navbar" role="navigation">
+      <a href="#" class="logo">Tech & Product News</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <div class="news-container">
+  <main>
+    <div class="news-container">
     <div class="news-card" id="tech-news-card">
       <h1>Latest Tech News</h1>
       <ul id="tech-news-list">
@@ -28,9 +33,10 @@
       <ul id="product-news-list">
         <!-- Product launch news items will be inserted dynamically -->
       </ul>
-      <button id="product-refresh-btn">Refresh Product News</button>
+      <button id="product-refresh-btn" aria-label="Refresh Product News">Refresh Product News</button>
     </div>
-  </div>
+    </div>
+  </main>
 
   <script>
     const techNewsItems = [

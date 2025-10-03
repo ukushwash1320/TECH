@@ -153,12 +153,14 @@ body {
 /* Responsive Design */
 @media (max-width: 1024px) {
   .products {
-      flex-direction: row;
-      gap: 10px;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
   }
 
   .product-card {
-      width: 100%;
+      width: 90%;
+      max-width: 500px;
   }
 
   .navbar ul {
@@ -167,14 +169,37 @@ body {
 }
 
 @media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      padding: 10px;
+  }
+  
+  .navbar ul {
+      margin-top: 10px;
+  }
+  
+  #companies {
+      padding: 30px 15px;
+  }
+  
   #companies h1 {
       font-size: 28px;
   }
 
+  .company-card {
+      margin-bottom: 30px;
+      padding: 15px;
+  }
+  
   .company-card h2 {
       font-size: 22px;
   }
 
+  .product-card {
+      width: 100%;
+      margin-bottom: 15px;
+  }
+  
   .product-card h3 {
       font-size: 18px;
   }
@@ -187,15 +212,36 @@ body {
       gap: 10px;
   }
 
-  .product-card ul li {
-      font-size: 12px;
+  .navbar .logo {
+      font-size: 20px;
+  }
+  
+  #companies {
+      padding: 20px 10px;
+  }
+  
+  #companies h1 {
+      font-size: 24px;
+  }
+  
+  .company-card {
+      padding: 10px;
+  }
+  
+  .company-card h2 {
+      font-size: 20px;
   }
 
   .product-card {
       width: 100%;
+      padding: 10px;
+  }
+  
+  .product-card h3 {
+      font-size: 16px;
   }
 
-  .navbar .logo {
-      font-size: 20px;
+  .product-card ul li {
+      font-size: 12px;
   }
 }

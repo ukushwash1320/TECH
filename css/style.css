@@ -81,12 +81,12 @@
   section {
     padding: 20px;
     margin: 10px 0;
-    background: none; /* Slightly transparent background for sections */
+    background: rgba(255, 255, 255, 0.1); /* Slightly transparent background for sections */
     border-radius: 8px;
   }
   
   #home {
-    color: none;
+    color: #333;
     text-align: center;
     padding: 50px 20px;
   }
@@ -106,7 +106,7 @@
     display: flex;
     justify-content: center; /* Center the image horizontally */
     align-items: center; /* Center the image vertically if it exceeds height */
-    border: 2px dashed none;
+    border: 2px dashed rgba(255, 255, 255, 0.3);
     padding: 50px;
     margin-top: 20px;
     height: 300px; /* Define the height of the image container */
@@ -138,7 +138,7 @@
   
   
    #new-tech {
-    color: wheat;
+    color: #333;
   }
   
   h1, h2 {
@@ -236,4 +236,95 @@
 #contact .card:hover {
   background: #333; /* Darker background on hover */
   border-color: #00FF96; /* Cyberpunk Green border on hover */
+}
+
+/* Responsive Design Improvements */
+@media (max-width: 1024px) {
+  .navbar ul {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #about .card, #contact .card {
+    width: 90%;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .navbar ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .navbar .dropdown {
+    position: static;
+    display: block;
+    background: rgba(51, 51, 51, 0.9);
+    margin-top: 10px;
+  }
+  
+  section {
+    padding: 15px;
+    margin: 5px;
+  }
+  
+  #home {
+    padding: 30px 15px;
+  }
+  
+  .space-for-images {
+    height: 200px;
+    padding: 20px;
+  }
+  
+  .cards-container {
+    gap: 15px;
+  }
+  
+  .card {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  #about .card, #contact .card {
+    width: 95%;
+    height: auto;
+    min-height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar .logo {
+    font-size: 20px;
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+  
+  h2 {
+    font-size: 20px;
+  }
+  
+  .space-for-images {
+    height: 150px;
+    padding: 15px;
+  }
+  
+  #about .card, #contact .card {
+    padding: 15px;
+    width: 98%;
+  }
 }
